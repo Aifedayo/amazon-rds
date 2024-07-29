@@ -14,3 +14,17 @@ class EC2:
             Description='RDS Security Group for Public Access',
             VpcId="vpc-08d64a43de278669e"
         )
+
+    def add_inbound_rule_to_sg(self, security_group_id):
+        print('Adding inbound access rule to security group ' + security_group_id)
+        self._client.authorize_security_group_ingress(
+            GroupId=security_group_id,
+            IpPermissions=[
+                {
+                    'IpProtocol': 'tcp',
+                    'FromPort': 5432,
+                    'ToPort': 5432,
+                    'IpRanges': [{'CidrIp': '0.0.0.0/0'}]
+                }
+            ],
+        )
