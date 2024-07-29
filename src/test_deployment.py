@@ -1,6 +1,7 @@
 from .client_factory import RDSClient
 from .rds import RDS
 
+
 def deploy_resource():
     rds_client = RDSClient().get_client()
     rds = RDS(rds_client)

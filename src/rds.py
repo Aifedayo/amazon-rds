@@ -29,6 +29,8 @@ class RDS:
 
     def create_postgresql_instance(self):
         security_group_id = create_db_security_group_and_rules()
+        self.create_db_subnet_group()
+        print('Creating DB Subnet Group!')
         print("Creating Amazon RDS PostgreSQL DB Instance")
         self._client.create_db_instance(
             DBName="MyPostgreSQLDB",
