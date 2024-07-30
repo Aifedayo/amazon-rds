@@ -1,4 +1,4 @@
-RDS_SECURITY_GROUP_NAME = 'my-rds-public-sg'
+RDS_SECURITY_GROUP_NAME = 'my-rds-public-sg-test'
 
 
 class EC2:

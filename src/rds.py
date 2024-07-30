@@ -1,7 +1,8 @@
-from .client_factory import EC2Client
-from .ec2 import EC2
+from client_factory import EC2Client
+from ec2 import EC2
 
-RDS_DB_SUBNET_NAME = 'my-rds-subnet-group'
+
+RDS_DB_SUBNET_NAME = 'my-rds-subnet-group-test'
 
 
 def create_db_security_group_and_rules():
@@ -37,7 +38,7 @@ class RDS:
             DBInstanceIdentifier="mypostgresdb",
             DBInstanceClass='db.t2.micro',
             Engine="postgres",
-            EngineVersion='9.6.6',
+            EngineVersion='13.3',
             Port=5432,
             MasterUsername="postgres",
             MasterUserPassword="mypostgrespassword",

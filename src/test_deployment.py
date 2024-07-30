@@ -1,5 +1,5 @@
-from .client_factory import RDSClient
-from .rds import RDS
+from client_factory import RDSClient
+from rds import RDS
 
 
 def deploy_resource():
