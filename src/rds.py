@@ -38,7 +38,7 @@ class RDS:
             DBInstanceIdentifier="mypostgresdb",
             DBInstanceClass='db.t2.micro',
             Engine="postgres",
-            EngineVersion='13.3',
+            EngineVersion='13.15',
             Port=5432,
             MasterUsername="postgres",
             MasterUserPassword="mypostgrespassword",
